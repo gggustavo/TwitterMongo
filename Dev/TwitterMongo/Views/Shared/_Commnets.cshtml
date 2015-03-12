@@ -1,0 +1,14 @@
+﻿<div class="well">
+    <textarea class="form-control" rows="3" id="txtMessage" data-bind="value: newMessage, jqAutoresize: {}" placeholder="What is happening?"></textarea>
+    <input type="button" class="btn btn-primary" value="Publish" id="btnShare" data-bind="click: addPost">
+    <ul id="msgHolder" data-bind="foreach: posts">
+        <li class="postHolder">
+            <p>
+                <a href="mailto:Email" data-bind="text: Email "></a>&nbsp; <span data-bind="     html: comment"></span>
+                <div class="postFooter">
+                    <time class="timeago" data-bind="text: Date"></time>
+                </div>
+            </p>
+        </li>
+    </ul>
+</div>
